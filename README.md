@@ -106,7 +106,7 @@ final_df = final_df.fillna({'bankrupt': 0})
 - **Precision:** 38% (bankruptcy class)
 - **Recall:** 64% (catches ~2/3 of bankruptcies)
 
-## 📈 Key Findings
+## Key Findings
 
 ### Finding 1: Financial Profile Differences
 Companies that went bankrupt showed dramatically different characteristics:
