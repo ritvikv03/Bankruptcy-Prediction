@@ -154,16 +154,16 @@ Companies that went bankrupt showed dramatically different characteristics:
 ## Repository Structure
 
 ```
-├── msba-project-ritvik.pdf          # Complete Jupyter notebook (PDF export)
+├── Bankruptcy_Pred.pdf              # Complete Jupyter notebook (PDF export)
 ├── msba-project-ritvik.ipynb        # Original notebook file
-├── Gen_Bus_780_Final_Project.pdf   # Assignment requirements
+├── Gen_Bus_780_Final_Project.pdf    # Assignment requirements
 ├── images/                          # Visualizations and screenshots
-│   ├── architecture_diagram.png
-│   ├── eda_financial_ratios.png
-│   ├── correlation_analysis.png
-│   ├── model_performance.png
-│   ├── predictions_chart.png
-│   └── ...
+│   ├── Bankruptcy_Pred.png
+│   ├── CM_ROC-AUC.png
+│   ├── Feature_Variable_Corr_Comparison.png
+│   ├── Financial_Ratios_Bankrupt_Comparison.png
+│   ├── Financial_Ratios_Dist_Comparison.png
+│   └── Top_Feature_Bankruptcy_Pred.png
 └── README.md                        # This file
 ```
 
