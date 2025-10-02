@@ -39,7 +39,7 @@ Processed Data (S3 Parquet)
 
 **Prediction Data:** 10 companies evaluated for new portfolio
 
-**Bankruptcy Rate:** 3.23% (220 bankrupt / 6,599 healthy)
+**Bankruptcy Rate:** 3.22% (178 bankrupt / 5344 healthy)
 
 ## Technologies Used
 
@@ -97,14 +97,14 @@ final_df = final_df.fillna({'bankrupt': 0})
 **Model:** Random Forest Classifier
 - 100 estimators
 - Max depth: 10
-- Class weight: balanced (handles 3.23% imbalance)
+- Class weight: balanced (handles 3.22% imbalance)
 - Random state: 42
 
 **Performance Metrics:**
-- **Accuracy:** 95.5%
-- **ROC-AUC:** 0.940
-- **Precision:** 38% (bankruptcy class)
-- **Recall:** 64% (catches ~2/3 of bankruptcies)
+- **Accuracy:** 95%
+- **ROC-AUC:** 0.898
+- **Precision:** 27% (bankruptcy class)
+- **Recall:** 33% (catches 1/3 of bankruptcies)
 
 ## Key Findings
 
@@ -118,38 +118,38 @@ Companies that went bankrupt showed dramatically different characteristics:
 
 **Risk Indicators (Positive Correlation):**
 1. Debt ratio percentage (+0.25)
-2. Borrowing dependency (+0.18)
-3. Current liability to current assets (+0.17)
+2. Borrowing dependency (+0.22)
+3. Liability to equity (+0.20)
 
 **Protective Factors (Negative Correlation):**
-1. Net income to total assets (-0.32)
-2. ROA before interest after tax (-0.28)
+1. Net income to total assets (-0.30)
+2. ROA before interest after tax (-0.27)
 3. Net worth to assets (-0.25)
 
 **Most Important Features (Model):**
-1. Persistent EPS (0.120)
-2. Borrowing dependency (0.095)
-3. Net income to total assets (0.092)
+1. Borrowing dependency (0.131)
+2. Persistent EPS (0.107)
+3. Net income to total assets (0.096)
 
 ## Investment Recommendations
 
 ### Portfolio Evaluation Results
 
-**HIGH RISK - AVOID (2 companies):**
-- Western Corp: 92.8% bankruptcy risk
-- Innocore: 68.7% bankruptcy risk
+**HIGH RISK - AVOID (3 companies):**
+- Western Corp: 87.75% bankruptcy risk
+- Design Solutions: 68.11% bankruptcy risk
+- Innocore: 59.09% bankruptcy risk
 
-**LOW RISK - RECOMMEND (8 companies):**
-- Design Solutions: 4.7%
-- Hallandall AG: 2.6%
-- Highwood & Hart: 2.5%
+**LOW RISK - RECOMMEND (7 companies):**
+- Hallandall AG: 3.97%
+- Highwood & Hart: 1.92%
 - Pharmasolve: 0.0%
-- Songster Inc: 0.0%
+- Songster Inc: 1.00%
 - Ninetech: 0.0%
 - Rogers and Sons: 0.0%
 - Foster & Kruse: 0.0%
 
-**Final Recommendation:** Invest in 8 companies, avoid 2 high-risk companies
+**Final Recommendation:** Invest in 7 companies, avoid 3 high-risk companies
 
 ## Repository Structure
 
@@ -184,7 +184,6 @@ Companies that went bankrupt showed dramatically different characteristics:
 ## Notes
 
 - Model predictions are based on historical patterns and current financial ratios
-- Design Solutions (4.7% risk) was not in historical training data; prediction based purely on current financial health indicators
 - Risk thresholds: <20% = LOW RISK, 20-50% = MEDIUM RISK, >50% = HIGH RISK
 - All AWS resources configured with LabRole for student account compatibility
 
