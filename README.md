@@ -32,7 +32,7 @@ Processed Data (S3 Parquet)
 
 ## Dataset
 
-**Training Data:** 6,819 companies with 24 financial features
+**Training Data:** 5522 companies with 23 financial features
 - **Source 1:** Balance sheet and income statement data (datacorp_financials.csv)
 - **Source 2:** Financial ratios calculated by analysts (msba_fg_ratios.csv)
 - **Source 3:** Historical bankruptcy records (msba_fg_bankruptcy.txt - pipe-delimited)
@@ -109,10 +109,10 @@ final_df = final_df.fillna({'bankrupt': 0})
 ## Key Findings
 
 ### Finding 1: Financial Profile Differences
-Companies that went bankrupt showed dramatically different characteristics:
-- **Debt ratio:** 69% higher (0.187 vs 0.111)
-- **Net income to total assets:** 9% lower (0.738 vs 0.810)
-- **ROA after tax:** 19% worse (0.457 vs 0.562)
+Companies that went bankrupt showed dramatically different characteristics (Mean Value Comparisons):
+- **Debt ratio:** 41% higher (0.188 vs 0.111)
+- **Net income to total assets:** 9% lower (0.741 vs 0.810)
+- **ROA after tax:** 18% worse (0.461 vs 0.562)
 
 ### Finding 2: Top Predictive Indicators
 
